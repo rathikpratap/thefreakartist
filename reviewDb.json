@@ -1,8 +1,24 @@
 {
   "reviews": [
     {
-      "id": 1,
-      "name": "Rathik"
+      "userName": "Rathik",
+      "review": "nice",
+      "id": 1
+    },
+    {
+      "userName": "rathik",
+      "review": "very nice",
+      "id": 2
+    },
+    {
+      "userName": "rathik",
+      "review": "very nice",
+      "id": 3
+    },
+    {
+      "userName": "kavita",
+      "review": "wow",
+      "id": 4
     }
   ]
 }

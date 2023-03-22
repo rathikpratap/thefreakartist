@@ -7,10 +7,11 @@ import { CustomerReviewService } from '../services/customer-review.service';
   styleUrls: ['./reviews.component.css']
 })
 export class ReviewsComponent {
-  userReview : any;
+  userReview : any={};
   constructor (private customerReview : CustomerReviewService) {
     this.customerReview.users().subscribe((data)=>{
       this.userReview = data;
+      
     });
   }
   getFormData (data: any) {
