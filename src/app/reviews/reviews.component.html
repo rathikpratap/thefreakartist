@@ -7,95 +7,57 @@
             <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="content-left">
                     <h1>Customers Reviews</h1>
-                    <span *ngIf="userReview.length" >
-                    <div class="reviewBody" *ngFor="let review of userReview" >
-                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="slideContainer">
-                                        <div class="slideContent">
-                                            <div class="cardWrapper">
-                                                <div class="card">
-                                                    <div class="imageContent">
-                                                        <span class="overlay"></span>
-                                                        <div class="cardImage">
-                                                            <img src="assets/images/profile1.png" alt="" class="cardImg">
+                    <span *ngIf="userReview.length">
+                        <div class="reviewBody">
+                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item" *ngFor="let review of userReview; let i=index"
+                                        [ngClass]="{'active': i === 0}">
+                                        <div class="slideContainer">
+                                            <div class="slideContent">
+                                                <div class="cardWrapper">
+                                                    <div class="card">
+                                                        <div class="imageContent">
+                                                            <span class="overlay"></span>
+                                                            <div class="cardImage">
+                                                                <img src="assets/images/profile1.png" alt=""
+                                                                    class="cardImg">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="cardContent">
-                                                        <h2 class="name"> {{review.userName}}</h2>
-                                                        <p class="description">{{review.review}}</p>
-                                                        <button class="button"> View More</button>
+                                                        <div class="cardContent">
+                                                            <h2 class="name"> {{review.userName}}</h2>
+                                                            <p class="description">{{review.review}}</p>
+                                                            <button class="button"> View More</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!--<div class="carousel-item">
-                                    <div class="slideContainer">
-                                        <div class="slideContent">
-                                            <div class="cardWrapper">
-                                                <div class="card">
-                                                    <div class="imageContent">
-                                                        <span class="overlay"></span>
-        
-                                                        <div class="cardImage">
-                                                            <img src="assets/images/profile1.png" alt="" class="cardImg">
-                                                        </div>
-                                                    </div>
-                                                    <div class="cardContent">
-                                                        <h2 class="name">Rathik Pratap</h2>
-                                                        <p class="description">the Lorem ipsum dolor sit amet consectetur
-                                                            adipisicing elit. Rerum consequuntur impedit perspiciatis et magni
-                                                            suscipit voluptates maiores aliquam. Cumque sunt ducimus itaque
-                                                            laudantium recusandae obcaecati neque sed id voluptatem aut.</p>
-                                                        <button class="button"> View More</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="slideContainer">
-                                        <div class="slideContent">
-                                            <div class="cardWrapper">
-                                                <div class="card">
-                                                    <div class="imageContent">
-                                                        <span class="overlay"></span>
-        
-                                                        <div class="cardImage">
-                                                            <img src="assets/images/profile1.png" alt="" class="cardImg">
-                                                        </div>
-                                                    </div>
-                                                    <div class="cardContent">
-                                                        <h2 class="name">Rathik Pratap</h2>
-                                                        <p class="description">the Lorem ipsum dolor sit amet consectetur
-                                                            adipisicing elit. Rerum consequuntur impedit perspiciatis et magni
-                                                            suscipit voluptates maiores aliquam. Cumque sunt ducimus itaque
-                                                            laudantium recusandae obcaecati neque sed id voluptatem aut.</p>
-                                                        <button class="button"> View More</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                             </div>
                         </div>
-                    </div>
-                </span>
+                    </span>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="content-right">
                     <h1> Write your Review</h1>
-                    <form #reviewForm = "ngForm" (ngSubmit)="getFormData(reviewForm.value)">
+                    <form #reviewForm="ngForm" (ngSubmit)="getFormData(reviewForm.value)">
                         <h6 class="name">Name: </h6>
-                        <input type="text" ngModel name ="userName" placeholder="Enter Your Name"/> <br/>
+                        <input type="text" ngModel name="userName" placeholder="Enter Your Name" /> <br />
                         <h6 class="name">Review: </h6>
-                        <input type="textbox" ngModel name ="review" placeholder="Enter your review"/> <br/>
+                        <input type="textbox" ngModel name="review" placeholder="Enter your review" /> <br />
                         <button class="button">Submit</button>
                     </form>
                 </div>
@@ -104,12 +66,7 @@
     </div>
     <app-navbar></app-navbar>
 </div>
-    <!--<div class=" container-fluid">
-        <div class="reviewBackground">
-            <div class="row">
-            <h1>Customers Reviews</h1>
-            </div>-->
-            <!--<div class="reviewBody">
+<!--<div class="reviewBody">
 
 
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -139,7 +96,7 @@
                                 </div>
                             </div>
                         </div>-->
-                    <!--<div class="carousel-item">
+<!--<div class="carousel-item">
                             <div class="slideContainer">
                                 <div class="slideContent">
                                     <div class="cardWrapper">
@@ -211,7 +168,7 @@
                             </div>
                         </div>-->
 
-                        <!--<div class="carousel-item">
+<!--<div class="carousel-item">
                             <div class="slideContainer">
                                 <div class="slideContent">
                                     <div class="cardWrapper">
@@ -263,7 +220,7 @@
                         </div>
                       </div>
                     </div>-->
-                        <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+<!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
@@ -281,5 +238,5 @@
                 <app-navbar></app-navbar>
 
             </div>-->
-            <!--<app-navbar></app-navbar>
+<!--<app-navbar></app-navbar>
             <router-outlet></router-outlet>-->
