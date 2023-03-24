@@ -12,7 +12,7 @@
                             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item" *ngFor="let review of userReview; let i=index"
-                                        [ngClass]="{'active': i === 0}">
+                                        [ngClass]="{'active': i == 0}">
                                         <div class="slideContainer">
                                             <div class="slideContent">
                                                 <div class="cardWrapper">
@@ -54,10 +54,23 @@
                 <div class="content-right">
                     <h1> Write your Review</h1>
                     <form #reviewForm="ngForm" (ngSubmit)="getFormData(reviewForm.value)">
-                        <h6 class="name">Name: </h6>
-                        <input type="text" ngModel name="userName" placeholder="Enter Your Name" /> <br />
-                        <h6 class="name">Review: </h6>
-                        <input type="textbox" ngModel name="review" placeholder="Enter your review" /> <br />
+                        <h6 class="name">Customer's Name: </h6>
+                        <input type="text" ngModel name="userName" placeholder="Enter Your Name" class="text" /> <br />
+                        <h6 class="name">Enter your opinions: </h6>
+                        <textarea ngModel name="review" placeholder="Type here..." ></textarea> <br />
+                        <h6 class="name"> Would you like to refer us to your Friends, Family, or Colleogues?</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              No
+                            </label>
+                          </div>
                         <button class="button">Submit</button>
                     </form>
                 </div>
