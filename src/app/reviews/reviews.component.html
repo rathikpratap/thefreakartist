@@ -57,7 +57,22 @@
                         <h6 class="name">Customer's Name: </h6>
                         <input type="text" ngModel name="userName" placeholder="Enter Your Name" class="text" /> <br />
                         <h6 class="name">Enter your opinions: </h6>
-                        <textarea ngModel name="review" placeholder="Type here..." ></textarea> <br />
+                        <textarea ngModel name="review" placeholder="Type here..." ></textarea> <br />   
+                        <div class="star-container">
+                            <div class="star-widget">
+                                <input type="radio" name="rate" id="rate-5" />
+                                <label for="rate-5" class="bi-star"></label>
+                                <input type="radio" name="rate" id="rate-4"/>
+                                <label for="rate-4" class="bi-star"></label>
+                                <input type="radio" name="rate" id="rate-3"/>
+                                <label for="rate-3" class="bi-star"></label>
+                                <input type="radio" name="rate" id="rate-2"/>
+                                <label for="rate-2" class="bi-star"></label>
+                                <input type="radio" name="rate" id="rate-1"/>
+                                <label for="rate-1" class="bi-star"></label> <br/>
+                                <p class="star-label"></p>  
+                            </div>
+                        </div>
                         <h6 class="name"> Would you like to refer us to your Friends, Family, or Colleogues?</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="refer" ngModel value="Yes" checked/>
