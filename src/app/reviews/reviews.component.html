@@ -27,6 +27,7 @@
                                                         <div class="cardContent">
                                                             <h2 class="name"> {{review.userName}}</h2>
                                                             <p class="description">{{review.review}}</p>
+                                                            <p class="description">{{review.rate}}</p>
                                                             <button class="button"> View More</button>
                                                         </div>
                                                     </div>
@@ -60,15 +61,15 @@
                         <textarea ngModel name="review" placeholder="Type here..." ></textarea> <br />   
                         <div class="star-container">
                             <div class="star-widget">
-                                <input type="radio" name="rate" id="rate-5" />
+                                <input type="radio" name="rate" id="rate-5" value="I just love it 😍" ngModel/>
                                 <label for="rate-5" class="bi-star"></label>
-                                <input type="radio" name="rate" id="rate-4"/>
+                                <input type="radio" name="rate" id="rate-4" value="I just like it 😎" ngModel/>
                                 <label for="rate-4" class="bi-star"></label>
-                                <input type="radio" name="rate" id="rate-3"/>
+                                <input type="radio" name="rate" id="rate-3" value="It is awesome 😁" ngModel/>
                                 <label for="rate-3" class="bi-star"></label>
-                                <input type="radio" name="rate" id="rate-2"/>
+                                <input type="radio" name="rate" id="rate-2" value="I don't like it 😒" ngModel/>
                                 <label for="rate-2" class="bi-star"></label>
-                                <input type="radio" name="rate" id="rate-1"/>
+                                <input type="radio" name="rate" id="rate-1" value="I just hate it 😡" ngModel/>
                                 <label for="rate-1" class="bi-star"></label> <br/>
                                 <p class="star-label"></p>  
                             </div>
