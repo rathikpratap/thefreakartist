@@ -1,26 +1,39 @@
 {
   "reviews": [
     {
-      "userName": "Rathik",
-      "review": "nice",
+      "userName": "Rathik Pratap Singh",
+      "review": "Nice",
+      "rate": "I just love it 😍",
+      "refer": "Yes",
       "id": 1
     },
     {
-      "userName": "Pranshu",
-      "review": "wow",
+      "userName": "Shashi",
+      "review": "Thats amazing",
+      "rate": "I just love it 😍",
+      "refer": "Yes",
       "id": 2
     },
     {
-      "userName": "Shashi",
-      "review": "nice sketch",
+      "userName": "Pranshu",
+      "review": "Woooooowwwww",
+      "rate": "I just like it 😎",
+      "refer": "Yes",
       "id": 3
     },
     {
-      "userName": "kavita",
-      "review": "wowwww",
+      "userName": "Kavita Sharma",
+      "review": "Amazing Drawing",
       "rate": "I just love it 😍",
       "refer": "Yes",
       "id": 4
+    },
+    {
+      "userName": "Vidushi Singh",
+      "review": "Great Amazing",
+      "rate": "I just love it 😍",
+      "refer": "Yes",
+      "id": 5
     }
   ]
 }

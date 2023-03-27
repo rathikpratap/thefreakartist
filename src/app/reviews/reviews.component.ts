@@ -8,6 +8,7 @@ import { CustomerReviewService } from '../services/customer-review.service';
 })
 export class ReviewsComponent {
   userReview : any={};
+  
   constructor (private customerReview : CustomerReviewService) {
     this.customerReview.users().subscribe((data)=>{
       this.userReview = data;
@@ -20,4 +21,9 @@ export class ReviewsComponent {
       
     })
   }
+  reviewAlert(){
+    alert("Thanks for your Respose. 😁");
+    location.reload();
+  }
+  
 }
