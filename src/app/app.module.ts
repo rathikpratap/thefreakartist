@@ -10,7 +10,8 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AboutComponent } from './about/about.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { GalleryComponent } from './gallery/gallery.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http'
     SocialMediaComponent,
     ReviewsComponent,
     AboutComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
