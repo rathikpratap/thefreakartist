@@ -15,10 +15,16 @@
     margin-top: 50px;
 }
 .img-header {
-   
-    padding: 20px;
+   width: 50%;
+    padding-top: 20px;
+}
+img {
+    width: 80%;
+    height: 85%;
+    margin-top: 50px;
 }
 .img1 {
-    width: inherit;
-    padding: 20px;
+    padding-top: 50px;
+    height: auto;
+    margin-top: 50px;
 }
