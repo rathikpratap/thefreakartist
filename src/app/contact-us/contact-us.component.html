@@ -1,0 +1,43 @@
+<div class="container-fluid constyle">
+    <div class="contact-background">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 contact-left">
+                <div class="contact-text"> Let's Get In Touch</div>
+                <img src="assets/images/contact.png" alt="" class="image"/>
+                <div class="social-links">
+                    <div class="second-text">Connect With Us</div>
+                    <ul class="social-media">
+                        <li><a href="#"><img src="assets/images/facebook.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="assets/images/instagram.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="assets/images/twitter.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 contact-right">
+                <div class="third-text">
+                    Contact Us
+                </div>
+                <form #contactForm="ngForm">
+                    <div class="contact-box">
+                        <input type="text" class="contact-input" required/>
+                        <label for=""> Name </label>
+                    </div>
+                    <div class="contact-box">
+                        <input type="email" class="contact-input" required>
+                        <label for=""> Email </label>
+                    </div>
+                    <div class="contact-box">
+                        <input type="tel" class="contact-input" required>
+                        <label for=""> Phone </label>
+                    </div>
+                    <div class="contact-box">
+                        <textarea name="" id="message" cols="30" rows="10" class="contact-input" required></textarea>
+                        <label for=""> Message </label>
+                    </div>
+                    <button class="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-navbar></app-navbar>
+</div>

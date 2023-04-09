@@ -1,18 +1,18 @@
 .gallery-background
 {
-    min-height: calc(100vh - 280px);
-    min-height: 300px;
     width: 90%;
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    min-height: calc(100vh - 280px);
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 0 10px grey;
     border-radius: 20px;
-    justify-content: space-between;
     text-align: center;
     padding: 50px;
 }
+
 .gallery-background h3 {
-    color: brown;
+    color: #ca96d6;
     margin-top: 50px;
+    font-size: 40px;
 }
 .img-header {
    width: 50%;
@@ -22,9 +22,17 @@ img {
     width: 80%;
     height: 85%;
     margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 16px 16px 40px rgb(255,255,255, 0.5);
+    cursor: pointer;
 }
 .img1 {
-    padding-top: 50px;
+    
     height: auto;
-    margin-top: 50px;
+    margin-top: 100px;
 }
+
+
+
+
+

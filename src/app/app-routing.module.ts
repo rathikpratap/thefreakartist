@@ -5,6 +5,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'gallery',
     component: GalleryComponent
+  },
+  {
+    path: 'contact',
+    component: ContactUsComponent
   }
 ];
 
