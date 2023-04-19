@@ -17,24 +17,24 @@
                 <div class="third-text">
                     Contact Us
                 </div>
-                <form #contactForm="ngForm">
+                <form #contactForm="ngForm" (ngSubmit)="getContactData(contactForm.value)">
                     <div class="contact-box">
-                        <input type="text" class="contact-input" required/>
+                        <input type="text" ngModel name="Name" class="contact-input" required/>
                         <label for=""> Name </label>
                     </div>
                     <div class="contact-box">
-                        <input type="email" class="contact-input" required>
+                        <input type="email" ngModel name="Email" class="contact-input" required>
                         <label for=""> Email </label>
                     </div>
                     <div class="contact-box">
-                        <input type="tel" class="contact-input" required>
+                        <input type="tel" ngModel name="Mobile Number" class="contact-input" required>
                         <label for=""> Phone </label>
                     </div>
                     <div class="contact-box">
-                        <textarea name="" id="message" cols="30" rows="10" class="contact-input" required></textarea>
+                        <textarea name="Qwery" ngModel id="message" cols="30" rows="10" class="contact-input" required></textarea>
                         <label for=""> Message </label>
                     </div>
-                    <button class="button">Submit</button>
+                    <button class="button" (click)="contactAlert()">Submit</button>
                 </form>
             </div>
         </div>

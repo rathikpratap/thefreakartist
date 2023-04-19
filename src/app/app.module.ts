@@ -12,7 +12,8 @@ import { AboutComponent } from './about/about.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { GalleryComponent } from './gallery/gallery.component';
-import { ContactUsComponent } from './contact-us/contact-us.component'
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { OrderComponent } from './order/order.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component'
     AboutComponent,
     GalleryComponent,
     ContactUsComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
