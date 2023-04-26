@@ -1,0 +1,16 @@
+.orderBackground
+{
+    width: 90%;
+    min-height: calc(100vh - 280px);
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 0 10px grey;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px ;
+}
+.order-left{
+    color: white;
+}
+.order-right{
+    color: white;
+}
