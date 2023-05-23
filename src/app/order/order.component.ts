@@ -11,6 +11,30 @@ export class OrderComponent {
   Order: any={};
   myImage!: Observable<any>;
   base64code!: any;
+  option = "choose";
+  bodyOption="choose";
+  faces : string = '';
+  bodyType: string  = '';
+  totalAmt : string = '';
+
+
+  totalAmount() {
+    this.faces = (<HTMLInputElement>document.getElementById("faceId")).value;
+    this.bodyType = (<HTMLInputElement>document.getElementById("bodyId")).value;
+    if(this.faces=='1' && this.bodyType=='1') {
+      this.totalAmt = '799';
+    } else if(this.faces=='1' && this.bodyType=='2') {
+      this.totalAmt = '1199';
+    } else if(this.faces=='2' && this.bodyType=='1') {
+      this.totalAmt = '999';
+    }
+    else if(this.faces=='2' && this.bodyType=='2') {
+      this.totalAmt = '1599';
+    } else {
+      this.totalAmt = "Please select faces And bodyType!!!";
+    }
+    console.log(this.faces);
+  }
 
   onChange = ($event: Event) => {
     const target = $event.target as HTMLInputElement;
@@ -29,6 +53,12 @@ export class OrderComponent {
       this.base64code = d
     })
   }
+
+  baseObject = {
+    imgData : this.base64code
+  };
+
+  baseString = JSON.stringify(this.baseObject);
 
   readFile (file:File, subscriber: Subscriber<any>) {
     const filereader = new FileReader();

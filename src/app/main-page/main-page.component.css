@@ -2,8 +2,8 @@
 {
     min-height: calc(100vh - 280px);
     min-height: 300px;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
@@ -15,8 +15,8 @@
 .content
 {
     transform: translateX(-80px);
-    
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -25,15 +25,89 @@
     padding: 40px;
     padding-left: 120px;
 }
+.content-middle
+{
+    
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    margin-top: 100px;
+}
+
+.about
+{
+    
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    margin-top: 100px;
+    
+}
+.about img{
+    border-radius: 50%;
+    width: 100%;
+}
+.about h4{
+    color: #8a2435;
+    text-align: center;
+    margin-top: 30px;
+}
+.about h3{
+    color: #ca96d6;
+}
+.about p{
+    font-size: 22px;
+    color: #8a2435;
+    text-align: justify;
+    font-weight: 500;
+}
+
 .content h2
 {
     font-size: 3em;
-    color: #8a2435;
+    color: #ca96d6;
 }
 .content p
 {
-    font-size: 1.2em;
+    font-size: 25px;
     color: #8a2435;
+    text-align: justify;
+}
+
+.content-middle h2
+{
+    font-size: 3em;
+    color: #ca96d6;
+    text-align: center;
+}
+.content-middle p
+{
+    font-size: 23px;
+    color: #8a2435;
+    padding-top: 20px;
+    text-align: justify;
+}
+.content-middle h4{
+    font-size: 1.5em;
+    color: #ca96d6;
+    padding-top: 20px;
+}
+.content-middle li {
+    color: #8a2435;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.content-middle ul{
+    padding-top: 30px;
+
 }
 .content a
 {
@@ -54,7 +128,7 @@
     max-width: 400px;
     animation: animate 5s linear infinite;
     border-radius: 50px;
-    box-shadow: 10px 10px 10px 10px grey;
+    box-shadow: 5px 5px 5px 5px grey;
 }
 @keyframes animate
 {
@@ -77,12 +151,11 @@ body {
 }
 
 .count {
-   
   width: 230px;
   height: 230px;
   background: lightgray;
   border-radius: 50%;
-  border: 1px solid gray;
+  
   
   color: white;
   font-weight: bold;
@@ -90,11 +163,11 @@ body {
   font-family: verdana;
   float: left;
   margin-left: 100px;
-  margin-top: 30px;
+  margin-top: 100px;
   text-shadow: 1px 1px black;
   -webkit-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 72px -9px rgba(255,255,255,0.75);
 }
 .count h2 {
     display: flex;
@@ -109,6 +182,32 @@ box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
     align-items: center;
    
 }
+.elements .safe {
+    width: 50px;
+    height: 50px;
+}
+.elements h3{
+    color: #ca96d6;
+    text-align: center;
+}
+.elements p{
+    color: #8a2435;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+.elements img{
+    height: 40px;
+    width: 40px;
+}
+.elements{
+    margin-top: 130px;
+     
+      
+    text-align: center;
+    
+}
+
 
 @media (max-width: 992px)
 {

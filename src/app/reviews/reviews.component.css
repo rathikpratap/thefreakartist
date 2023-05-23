@@ -4,8 +4,8 @@
     min-height: calc(100vh - 280px);
     min-height: 300px;
     width: 90%;
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     justify-content: space-between;
     text-align: center;
@@ -16,7 +16,7 @@
 {
     transform: translateX(-80px);
     
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -30,7 +30,7 @@
 {
     transform: translateX(80px);
     text-align: justify;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -123,6 +123,7 @@
 .content-right .name{
     font-size: 22px ;
     padding: 20px 0px;
+    color: white;
 }
 .content-right h1 {
     text-align: center;
@@ -156,6 +157,7 @@
 
 .form-check label{
     font-size: 20px;
+    color: white;
 }
 
 .star-container{
@@ -170,7 +172,7 @@
 
 .star-widget label {
     font-size: 40px;
-    color: #444;
+    color: grey;
     padding: 10px;
     float: right;
     transition: all 0.2s ease;

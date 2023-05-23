@@ -6,11 +6,11 @@
                     <h1> Details </h1>
                     <p> For Single person's Head to Shoulder sketch - </p>
                     <p> A4 Size- Rs. 799 </p>
-                    <p> FOr Single person's Full body sketch - </p>
+                    <p> For Single person's Full body sketch - </p>
                     <p> A4 size- Rs. 1199 </p>
                     <p> For Couple's Head to Shoulder sketch - </p>
                     <p> A4 Size- Rs. 999 </p>
-                    <p> FOr Couple's Full body sketch - </p>
+                    <p> For Couple's Full body sketch - </p>
                     <p> A4 size- Rs. 1599 </p>
                     <h3> Terms & Conditions- </h3>
                     <ul>
@@ -32,36 +32,46 @@
                     </ul>
                     <h3> Contact Details:</h3>
                     <p> WhatsApp- 7017169759</p>
-                    <p> E-mail- freakartist06@gmail.com</p>
+                    <p> E-mail- freakartist6@gmail.com</p>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-right">
-                <h3> Photo to Handmade Pencil Sketch Order </h3>
-                <h4> Please select the following as per your Requirements</h4>
-                <form #orderForm="ngForm" (ngSubmit)="getOrderdata(orderForm.value)">
-                    <h6 class="name"> Name: </h6>
-                    <input type="text" ngModel name="customerName" placeholder="Enter your name.." required>
-                    <h6 class="name"> Email ID: </h6>
-                    <input type="email" ngModel name="customerEmail" placeholder="Enter your Email..">
-                    <h6 class="name"> Mobile Number: </h6>
-                    <input type="tel" ngModel name="customerNumber" placeholder="Enter your number..">
-                    <h6>Paper Size:</h6>
-                    <input type="text" ngModel name="Paper size" placeholder="A4 Size Paper" disabled>
-                    <h6> Faces: </h6>
-                    <select name="face" ngModel>
-                        <option selected>Choose an option</option>
-                        <option value="1">1 Face</option>
-                        <option value="2">2 Faces</option>
-                    </select>
-                    <h6>Address: </h6>
-                    <textarea ngModel name="address" id="add" cols="60" rows="5" required></textarea>
-                    <h6> Upload: </h6>
-                    <input type="file" (change)="onChange($event)">
-                    <h6>Remark: </h6>
-                    <textarea name="remark" ngModel id="remark" cols="60" rows="5" required></textarea>
-                    <textarea name="base64" ngModel cols="60" rows="3" class="hidebase64" value="{{base64code}}"></textarea> <br/>
-                    <button class="button" (click)="orderAlert()">Submit</button>
-                </form>
+                <div class="order-form">
+                    <h3> Photo to Handmade Pencil Sketch Order </h3>
+                    <h5> Please select the following as per your Requirements</h5>
+                    <form #orderForm="ngForm" (ngSubmit)="getOrderdata(orderForm.value)">
+                        <h6 class="name"> Name: </h6>
+                        <input type="text" ngModel name="customerName" placeholder="Enter your name.." required>
+                        <h6 class="name"> Email ID: </h6>
+                        <input type="email" ngModel name="customerEmail" placeholder="Enter your Email..">
+                        <h6 class="name"> Mobile Number: </h6>
+                        <input type="tel" ngModel name="customerNumber" placeholder="Enter your number..">
+                        <h6>Paper Size:</h6>
+                        <input type="text" name="Paper size" placeholder="A4 Size Paper" readonly disabled>
+                        <h6> Faces: </h6>
+                        <select name="face" [(ngModel)]="option" id="faceId" (change)="totalAmount()">
+                            <option [ngValue]="'choose'">Choose an option</option>
+                            <option value="1">1 Face</option>
+                            <option value="2">2 Faces</option>
+                        </select>
+                        <h6> Body Type: </h6>
+                        <select name="body" [(ngModel)]="bodyOption" id="bodyId"  (change)="totalAmount()">
+                            <option [ngValue]="'choose'">Choose an option</option>
+                            <option value="1">Face to Shoulder</option>
+                            <option value="2">Full Body</option>
+                        </select>
+                        <h6>Address: </h6>
+                        <textarea ngModel name="address" id="add" cols="60" rows="5" required></textarea>
+                        <h6> Upload your Photo: </h6>
+                        <input type="file" (change)="onChange($event)">
+                        <h6>Remark: </h6>
+                        <textarea name="remark" ngModel id="remark" cols="60" rows="5" required></textarea>
+                        <textarea name="base64" [(ngModel)]="base64code" cols="60" rows="3" class="hidebase64"></textarea>
+                        <h6 class="name"> Amount: </h6>
+                        <input type="text" [(ngModel)]="totalAmt" name="Amount" readonly required/> <br/>
+                        <button class="button" (click)="orderAlert()">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
