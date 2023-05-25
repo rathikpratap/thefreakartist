@@ -21,6 +21,9 @@
 .navbar-collapse {
     flex-grow: 0;
 }
+.navbar-toggler{
+    background-color: #8a2435;
+}
 .header .logo
 {
     width: 120px;

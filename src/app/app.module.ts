@@ -13,7 +13,8 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { OrderComponent } from './order/order.component'
+import { OrderComponent } from './order/order.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { OrderComponent } from './order/order.component'
     GalleryComponent,
     ContactUsComponent,
     OrderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
