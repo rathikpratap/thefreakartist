@@ -19,22 +19,25 @@
                 </div>
                 <form #contactForm="ngForm" (ngSubmit)="getContactData(contactForm.value)">
                     <div class="contact-box">
-                        <input type="text" ngModel name="Name" class="contact-input" required/>
+                        <input type="text" ngModel name="Name" class="contact-input" required #name="ngModel" pattern="[a-zA-Z ]+$"/>
                         <label for=""> Name </label>
+                        <span *ngIf="name.invalid && name.touched"> Please Enter Valid Name </span>
                     </div>
                     <div class="contact-box">
-                        <input type="email" ngModel name="Email" class="contact-input" required>
+                        <input type="email" ngModel name="Email" class="contact-input" required #email="ngModel" email>
                         <label for=""> Email </label>
+                        <span *ngIf="email.invalid && email.touched"> Please Enter Valid Email </span>
                     </div>
                     <div class="contact-box">
-                        <input type="tel" ngModel name="Mobile Number" class="contact-input" required>
+                        <input type="tel" ngModel name="Mobile Number" class="contact-input" required #mobile="ngModel" pattern="^((\\+91-?)|0)?[0-9]{10}$">
                         <label for=""> Phone </label>
+                        <span *ngIf="mobile.invalid && mobile.touched"> Please Enter Valid Mobile number </span>
                     </div>
                     <div class="contact-box">
                         <textarea name="Qwery" ngModel id="message" cols="30" rows="10" class="contact-input" required></textarea>
                         <label for=""> Message </label>
                     </div>
-                    <button class="button" (click)="contactAlert()">Submit</button>
+                    <button class="button" (click)="contactAlert()" [disabled]="contactForm.invalid">Submit</button>
                 </form>
             </div>
         </div>

@@ -130,15 +130,17 @@ form{
     color: #fff;
     transition: .3s;
 }
+
 .contact-box .contact-input:focus ~ label,
 .contact-box .contact-input:valid ~ label{
     top: -1px;
     left: 10px;
-    background: #3c2360;
+    background: black;
     font-weight: 500;
     font-size: 12px;
     padding: 5px;
 }
+  
 textarea.contact-input{
     resize: none;
     min-height: 150px;
@@ -147,14 +149,18 @@ textarea.contact-input{
 .button{
     position: relative;
     top: 100px;
-    background: #fff;
+    background: #ca96d6;
     outline: none;
     border: none;
     border-radius: 4px;
     height: 45px;
     width: 30%;
     font-size: 20px;
-    color: #3c2360;
+    color: #fff;
     cursor: pointer;
-    font-weight: 500 ;
+    font-weight: 300 ;
+}
+.contact-box span{
+    color: #fff;
+    margin-left: 70px;
 }

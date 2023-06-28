@@ -213,6 +213,11 @@ input#rate-5:checked ~ label{
   transition: all 0.2s ease;
   }
 
+  .content-right span{
+    color: red;
+    font-weight: 500;
+  }
+
 
 @media(max-width: 1200px ) {
     .carousel-item.active, .carousel-item-next, .carousel-item-prev {

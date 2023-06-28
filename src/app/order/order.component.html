@@ -34,6 +34,11 @@
                     <p> WhatsApp- 7017169759</p>
                     <p> E-mail- freakartist6@gmail.com</p>
                 </div>
+                <div class="qrCode">
+                    <h2> Scan for Payment </h2>
+                    <img src="assets/images/QRCode.png" alt="">
+                    <p> <span>*</span>Share your payment screenshot on Whatsapp or Email </p>
+                </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-right">
                 <div class="order-form">
@@ -41,11 +46,14 @@
                     <h5> Please select the following as per your Requirements</h5>
                     <form #orderForm="ngForm" (ngSubmit)="getOrderdata(orderForm.value)">
                         <h6 class="name"> Name: </h6>
-                        <input type="text" ngModel name="customerName" placeholder="Enter your name.." required>
+                        <input type="text" ngModel name="customerName" placeholder="Enter your name.." required #name="ngModel" pattern="[a-zA-Z ]+$">
+                        <span *ngIf="name.invalid && name.touched"> Please Enter Valid Name </span>
                         <h6 class="name"> Email ID: </h6>
-                        <input type="email" ngModel name="customerEmail" placeholder="Enter your Email..">
+                        <input type="email" ngModel name="customerEmail" placeholder="Enter your Email.." required #email="ngModel" email>
+                        <span *ngIf="email.invalid && email.touched"> Please Enter Valid Email </span>
                         <h6 class="name"> Mobile Number: </h6>
-                        <input type="tel" ngModel name="customerNumber" placeholder="Enter your number..">
+                        <input type="tel" ngModel name="customerNumber" placeholder="Enter your number.." required #mobile="ngModel" pattern="^((\\+91-?)|0)?[0-9]{10}$">
+                        <span *ngIf="mobile.invalid && mobile.touched"> Please Enter Valid Mobile number </span>
                         <h6>Paper Size:</h6>
                         <input type="text" name="Paper size" placeholder="A4 Size Paper" readonly disabled>
                         <h6> Faces: </h6>
@@ -61,15 +69,17 @@
                             <option value="2">Full Body</option>
                         </select>
                         <h6>Address: </h6>
-                        <textarea ngModel name="address" id="add" cols="60" rows="5" required></textarea>
+                        <textarea ngModel name="address" id="add" cols="60" rows="5" required #address="ngModel"></textarea>
+                        <span *ngIf="address.invalid && address.touched"> Please Enter your Address </span>
                         <h6> Upload your Photo: </h6>
                         <input type="file" (change)="onChange($event)">
                         <h6>Remark: </h6>
                         <textarea name="remark" ngModel id="remark" cols="60" rows="5" required></textarea>
                         <textarea name="base64" [(ngModel)]="base64code" cols="60" rows="3" class="hidebase64"></textarea>
                         <h6 class="name"> Amount: </h6>
-                        <input type="text" [(ngModel)]="totalAmt" name="Amount" readonly required/> <br/>
-                        <button class="button" (click)="orderAlert()">Submit</button>
+                        <input type="text" [(ngModel)]="totalAmt" name="Amount" placeholder="Select face and body type" readonly required/> <br/>
+                        <button class="button" (click)="orderAlert()" [disabled]="orderForm.invalid" >Submit</button>
+                        <button class="button" (click)="cancelOrder(orderForm)" >Cancel</button>
                     </form>
                 </div>
             </div>

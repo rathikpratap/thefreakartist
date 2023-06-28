@@ -56,8 +56,9 @@
                     <h1> Write your Review</h1>
                     <form #reviewForm="ngForm" (ngSubmit)="getFormData(reviewForm.value)">
                         <h6 class="name">Customer's Name: </h6>
-                        <input type="text" ngModel name="userName" placeholder="Enter Your Name" class="text" /> <br />
-                        <h6 class="name">Enter your opinions: </h6>
+                        <input type="text" ngModel name="userName" placeholder="Enter Your Name" class="text" required #name="ngModel" pattern="[a-zA-Z ]+$"/>
+                        <span *ngIf="name.invalid && name.touched"> Please Enter Valid Name </span>
+                        <h6 class="name">Enter your opinions (Optional): </h6>
                         <textarea ngModel name="review" placeholder="Type here..." ></textarea> <br />   
                         <div class="star-container">
                             <div class="star-widget">
@@ -87,7 +88,7 @@
                               No
                             </label>
                         </div>
-                        <button class="button" (click)="reviewAlert()">Submit</button>
+                        <button class="button" (click)="reviewAlert()" [disabled]="reviewForm.invalid">Submit</button>
                     </form>
                 </div>
             </div>

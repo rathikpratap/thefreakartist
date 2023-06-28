@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./social-media.component.css']
 })
 export class SocialMediaComponent {
-
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
 }

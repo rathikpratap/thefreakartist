@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OrderNowService } from '../services/order-now.service';
 import { Observable, Subscriber, observable } from 'rxjs';
+import { Form, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-order',
@@ -94,7 +95,10 @@ export class OrderComponent {
   }
   orderAlert(){
 
-    alert("Thanks for your Response. 😁");
+    alert("Please make Payment by Scanning QR Code and press OK. 😁");
     location.reload();
+  }
+  cancelOrder(orderForm : NgForm){
+    orderForm.reset()
   }
 }

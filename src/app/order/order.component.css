@@ -38,6 +38,21 @@
     font-size: 18px;
     padding-left: 50px;
 }
+.qrCode h2{
+    color: #8f50ec;
+    text-align: center;
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.qrCode p{
+    margin-top: 20px;
+}
+.qrCode p span{
+    color: red;
+    font-size: larger;
+    font-weight: 700;
+}
 .order-form {
     text-align: left;
     padding-left: 50px;
@@ -76,7 +91,8 @@
     font-size: 20px;
     color: #fff;
     cursor: pointer;
-    font-weight: 500 ;
+    font-weight: 500;
+    margin-right: 50px;
 }
 .order-form textarea{
     resize: none;
